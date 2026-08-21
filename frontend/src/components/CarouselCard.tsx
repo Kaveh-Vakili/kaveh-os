@@ -13,11 +13,11 @@ export function CarouselCard({ mod, active }: { mod: ModuleDef; active: boolean 
       <Link
         to={mod.path}
         draggable={false}
-        className="group relative block overflow-hidden rounded-2xl border border-ink/5 bg-linear-to-br from-parchment-soft to-parchment p-6 shadow-xl shadow-black/10"
+        className="group relative block overflow-hidden rounded-2xl border border-starlight/15 bg-linear-to-br from-surface to-background p-6 shadow-xl shadow-black/20"
       >
         <motion.div
           aria-hidden
-          className="pointer-events-none absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-linear-to-r from-transparent via-white/50 to-transparent"
+          className="pointer-events-none absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-linear-to-r from-transparent via-starlight/30 to-transparent"
           animate={active ? { x: ["-100%", "420%"] } : { x: "-100%" }}
           transition={{ duration: 1.8, repeat: active ? Infinity : 0, repeatDelay: 2.2, ease: "easeInOut" }}
         />
@@ -30,16 +30,18 @@ export function CarouselCard({ mod, active }: { mod: ModuleDef; active: boolean 
           {mod.emoji}
         </motion.div>
 
-        <h3 className="relative text-lg font-semibold text-ink">{mod.label}</h3>
-        <p className="relative mt-1 text-sm text-ink-soft">{mod.description}</p>
+        <h3 className="relative text-lg font-semibold text-foreground">{mod.label}</h3>
+        <p className="relative mt-1 text-sm text-foreground-soft">{mod.description}</p>
 
         <span
           className={`relative mt-4 inline-flex items-center gap-1.5 text-xs ${
-            mod.status === "online" ? "text-emerald-600" : "text-ink-soft/60"
+            mod.status === "online" ? "text-emerald-400" : "text-foreground-soft/60"
           }`}
         >
           <span
-            className={`h-1.5 w-1.5 rounded-full ${mod.status === "online" ? "bg-emerald-500" : "bg-ink-soft/40"}`}
+            className={`h-1.5 w-1.5 rounded-full ${
+              mod.status === "online" ? "bg-emerald-400" : "bg-foreground-soft/40"
+            }`}
           />
           {mod.status === "online" ? "Online" : "Not connected"}
         </span>

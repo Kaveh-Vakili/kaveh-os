@@ -2,10 +2,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-parchment: #f7efe2;
-  --color-parchment-soft: #efe4d0;
-  --color-ink: #2b2440;
-  --color-ink-soft: #5b5270;
+  --color-background: #0c1a3e;
+  --color-surface: #16255c;
+  --color-foreground: #eef1fb;
+  --color-foreground-soft: #aab4d8;
   --color-nightsky: #1b1830;
   --color-nightsky-light: #2c2750;
   --color-starlight: #f4c978;
@@ -15,8 +15,8 @@
 }
 
 body {
-  background-color: var(--color-parchment);
-  color: var(--color-ink);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
 }
 
 @keyframes twinkle {

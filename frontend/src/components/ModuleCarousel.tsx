@@ -48,7 +48,7 @@ export function ModuleCarousel() {
             onClick={() => goTo(i)}
             aria-label={`Go to ${mod.label}`}
             className={`h-1.5 rounded-full transition-all ${
-              i === active ? "w-6 bg-starlight" : "w-1.5 bg-ink-soft/30"
+              i === active ? "w-6 bg-starlight" : "w-1.5 bg-foreground-soft/30"
             }`}
           />
         ))}

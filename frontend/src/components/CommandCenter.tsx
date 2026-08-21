@@ -7,13 +7,13 @@ export function CommandCenter() {
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.15 }}
-      className="relative rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
+      className="relative rounded-2xl border border-starlight/15 bg-starlight/5 p-6 backdrop-blur-md"
     >
       <div className="mb-4 flex items-center gap-2">
         <span className="text-xl">📡</span>
         <div>
-          <h2 className="font-display text-lg font-semibold text-parchment">Command Center</h2>
-          <p className="text-xs text-parchment-soft">Latest updates across your modules</p>
+          <h2 className="font-display text-lg font-semibold text-foreground">Command Center</h2>
+          <p className="text-xs text-foreground-soft">Latest updates across your modules</p>
         </div>
       </div>
 
@@ -24,9 +24,9 @@ export function CommandCenter() {
             initial={{ opacity: 0, x: -8 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.2 + i * 0.05 }}
-            className="flex items-center justify-between rounded-lg bg-white/5 px-3 py-2 text-sm"
+            className="flex items-center justify-between rounded-lg bg-starlight/5 px-3 py-2 text-sm"
           >
-            <span className="flex items-center gap-2 text-parchment-soft">
+            <span className="flex items-center gap-2 text-foreground-soft">
               <span>{mod.emoji}</span>
               {mod.label}
             </span>
@@ -38,7 +38,7 @@ export function CommandCenter() {
                 animate={{ opacity: [0.4, 1, 0.4] }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               />
-              <span className={mod.status === "online" ? "text-emerald-300" : "text-parchment-soft/70"}>
+              <span className={mod.status === "online" ? "text-emerald-300" : "text-foreground-soft/70"}>
                 {mod.status === "online" ? "Online" : "Not connected"}
               </span>
             </span>

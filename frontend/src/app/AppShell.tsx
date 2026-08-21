@@ -8,10 +8,10 @@ export function AppShell() {
   const { user, signOut } = useAuth()
 
   return (
-    <div className="relative min-h-screen bg-parchment">
+    <div className="relative min-h-screen bg-background">
       <AmbientAura />
 
-      <nav className="sticky top-0 z-10 bg-nightsky text-parchment shadow-lg shadow-black/20">
+      <nav className="sticky top-0 z-10 bg-nightsky text-foreground shadow-lg shadow-black/20">
         <div className="mx-auto flex max-w-6xl items-center gap-6 px-6 py-3">
           <NavLink to="/" className="text-lg font-semibold tracking-wide text-starlight">
             Kaveh OS
@@ -31,7 +31,7 @@ export function AppShell() {
                     )}
                     <span
                       className={`relative z-10 transition-colors ${
-                        isActive ? "text-starlight" : "text-parchment-soft hover:text-starlight"
+                        isActive ? "text-starlight" : "text-foreground-soft hover:text-starlight"
                       }`}
                     >
                       {mod.emoji} {mod.label}
@@ -42,12 +42,12 @@ export function AppShell() {
             ))}
           </div>
 
-          <div className="flex items-center gap-3 text-sm text-parchment-soft">
+          <div className="flex items-center gap-3 text-sm text-foreground-soft">
             <span className="hidden sm:inline">{user?.email}</span>
             <button
               type="button"
               onClick={signOut}
-              className="rounded-full border border-parchment-soft/30 px-3 py-1.5 transition-colors hover:border-starlight hover:text-starlight"
+              className="rounded-full border border-foreground-soft/30 px-3 py-1.5 transition-colors hover:border-starlight hover:text-starlight"
             >
               Sign out
             </button>

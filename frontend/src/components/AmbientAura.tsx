@@ -19,7 +19,7 @@ export function AmbientAura() {
             top: orb.top,
             left: orb.left,
             background: orb.color,
-            opacity: 0.14,
+            opacity: 0.2,
           }}
           animate={{ x: [0, 40, -20, 0], y: [0, -30, 20, 0] }}
           transition={{ duration: orb.duration, repeat: Infinity, ease: "easeInOut", delay: i * 1.5 }}

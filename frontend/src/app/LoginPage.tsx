@@ -36,10 +36,10 @@ export function LoginPage() {
         initial={{ opacity: 0, y: 16, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ type: "spring", stiffness: 260, damping: 24 }}
-        className="relative w-full max-w-lg rounded-lg bg-parchment p-10 shadow-2xl shadow-starlight/10"
+        className="relative w-full max-w-lg rounded-lg bg-surface p-10 shadow-2xl shadow-starlight/10"
       >
-        <h1 className="mb-1 font-display text-3xl font-semibold text-ink">Kaveh OS</h1>
-        <p className="mb-6 text-sm text-ink-soft">
+        <h1 className="mb-1 font-display text-3xl font-semibold text-foreground">Kaveh OS</h1>
+        <p className="mb-6 text-sm text-foreground-soft">
           {mode === "signin" ? "Welcome back." : "Create your account."}
         </p>
 
@@ -50,7 +50,7 @@ export function LoginPage() {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="rounded-md border border-ink/10 bg-white px-3 py-2 text-sm text-ink outline-none focus:border-starlight focus:ring-2 focus:ring-starlight/30"
+            className="rounded-md border border-starlight/15 bg-nightsky/50 px-3 py-2 text-sm text-foreground outline-none placeholder:text-foreground-soft/60 focus:border-starlight focus:ring-2 focus:ring-starlight/30"
           />
           <input
             type="password"
@@ -59,7 +59,7 @@ export function LoginPage() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="rounded-md border border-ink/10 bg-white px-3 py-2 text-sm text-ink outline-none focus:border-starlight focus:ring-2 focus:ring-starlight/30"
+            className="rounded-md border border-starlight/15 bg-nightsky/50 px-3 py-2 text-sm text-foreground outline-none placeholder:text-foreground-soft/60 focus:border-starlight focus:ring-2 focus:ring-starlight/30"
           />
 
           {error && <p className="text-sm text-rose">{error}</p>}
@@ -77,7 +77,7 @@ export function LoginPage() {
         <button
           type="button"
           onClick={() => setMode(mode === "signin" ? "signup" : "signin")}
-          className="mt-4 text-sm text-ink-soft underline decoration-dotted underline-offset-2"
+          className="mt-4 text-sm text-foreground-soft underline decoration-dotted underline-offset-2"
         >
           {mode === "signin" ? "Need an account? Sign up" : "Already have an account? Sign in"}
         </button>
