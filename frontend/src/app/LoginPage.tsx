@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom"
 import { motion } from "framer-motion"
 import { useAuth } from "./AuthContext"
 import { Starfield } from "../components/Starfield"
+import { MagicWand } from "../components/MagicWand"
 
 export function LoginPage() {
   const { session, signIn, signUp } = useAuth()
@@ -36,6 +37,7 @@ export function LoginPage() {
         transition={{ type: "spring", stiffness: 260, damping: 24 }}
         className="relative w-full max-w-lg rounded-lg bg-parchment p-10 shadow-2xl shadow-starlight/10"
       >
+        <MagicWand />
         <h1 className="mb-1 font-display text-3xl font-semibold text-ink">Kaveh OS</h1>
         <p className="mb-6 text-sm text-ink-soft">
           {mode === "signin" ? "Welcome back." : "Create your account."}
