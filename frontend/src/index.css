@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  --color-parchment: #f7efe2;
+  --color-parchment-soft: #efe4d0;
+  --color-ink: #2b2440;
+  --color-ink-soft: #5b5270;
+  --color-nightsky: #1b1830;
+  --color-nightsky-light: #2c2750;
+  --color-starlight: #f4c978;
+  --color-starlight-soft: #f9dfa6;
+  --color-rose: #e3a08a;
+}
+
+body {
+  background-color: var(--color-parchment);
+  color: var(--color-ink);
+}
