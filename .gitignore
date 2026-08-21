@@ -1,0 +1,21 @@
+# frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# backend
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.env
+backend/.pytest_cache/
+
+# supabase
+supabase/.temp/
+supabase/.branches/
+
+# editor / os
+.DS_Store
+.vscode/
+.idea/
