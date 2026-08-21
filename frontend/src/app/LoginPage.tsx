@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom"
 import { motion } from "framer-motion"
 import { useAuth } from "./AuthContext"
 import { Starfield } from "../components/Starfield"
+import { Spotlights } from "../components/Spotlights"
 
 export function LoginPage() {
   const { session, signIn, signUp } = useAuth()
@@ -29,6 +30,7 @@ export function LoginPage() {
 
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-nightsky px-4">
+      <Spotlights />
       <Starfield />
       <motion.div
         initial={{ opacity: 0, y: 16, scale: 0.98 }}
