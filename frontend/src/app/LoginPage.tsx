@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom"
 import { motion } from "framer-motion"
 import { useAuth } from "./AuthContext"
 import { Starfield } from "../components/Starfield"
+import { RocketFlyby } from "../components/RocketFlyby"
 
 export function LoginPage() {
   const { session, signIn, signUp } = useAuth()
@@ -30,6 +31,7 @@ export function LoginPage() {
   return (
     <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-nightsky px-4">
       <Starfield />
+      <RocketFlyby />
       <motion.div
         initial={{ opacity: 0, y: 16, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
