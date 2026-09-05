@@ -1,6 +1,6 @@
 # Kaveh OS
 
-Personal operations dashboard — Health, Finance, Leetcode, Assistant, Calendar, News.
+Personal operations dashboard — Health, Finance, Assistant, Calendar, News.
 
 ## Stack
 
