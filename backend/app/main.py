@@ -3,8 +3,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.auth import CurrentUser, get_current_user
 from app.core.config import settings
+from app.modules.health.router import router as health_router
 
 app = FastAPI(title="Kaveh OS API")
+app.include_router(health_router)
 
 app.add_middleware(
     CORSMiddleware,
